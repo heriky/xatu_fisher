@@ -7,7 +7,7 @@ import { VGroup, HGroup } from '../../../components'
 
 import fakeImg from '../assets/timg.jpg'
 
-import iconCollect from '../assets/collect.svg'
+import iconComment from '../assets/collect.svg'
 import iconView from '../assets/view.svg'
 import iconShare from '../assets/share.svg'
 
@@ -30,6 +30,10 @@ const style = {
     avatarDesc: {
         color: '#ddd',
         fontSize: 'initial'
+    },
+    updateTime: {
+        fontSize: 'small',
+        color: '#bbb'
     },
     goodsDesc: {
         textOverflow: 'ellipsis',
@@ -59,12 +63,13 @@ export default class ItemCard extends Component {
     static propTypes = {
         avatarUrl: PropTypes.string,
         nickname: PropTypes.string,
-        tag: PropTypes.string,
+        tags: PropTypes.array,
         desc: PropTypes.string,
         faceImgUrl: PropTypes.string,
+        updateTime: PropTypes.string,
 
         viewCount: PropTypes.number,
-        collectCount: PropTypes.number,
+        commentCount: PropTypes.number,
         
         onView: PropTypes.func,
         onCollect: PropTypes.func,
@@ -74,12 +79,13 @@ export default class ItemCard extends Component {
     static defaultProps = {
         avatarUrl: 'https://img.moegirl.org/common/thumb/f/fc/20568578.jpg/450px-20568578.jpg',
         nickname: 'hankang',
-        tag: '动漫',
+        updateTime: '发布于8分钟之前',
+        tags: [],
         desc: '最爱犬夜叉最爱犬夜叉最爱犬夜叉最爱犬夜叉最爱犬夜叉最爱犬夜叉最爱犬夜叉最爱犬夜叉',
         faceImgUrl: fakeImg,
 
         viewCount: 999,
-        collectCount: 999
+        commentCount: 999
     }
 
     renderOp() {
@@ -87,13 +93,13 @@ export default class ItemCard extends Component {
     }
 
     render() {
-        const { avatarUrl, nickname, tag, desc, faceImgUrl, viewCount, collectCount, onView, onCollect, onShare } = this.props
+        const { avatarUrl, nickname, tag, desc, faceImgUrl, viewCount, commentCount, onView, onCollect, onShare } = this.props
         return <VGroup hAlign='flex-start' vAlign='flex-start' _style={style.root}>
             <HGroup vAlign='flex-start' hAlign='flex-start' _style={style.avatarRoot}>
                 <Image style={style.avatar} src={avatarUrl}></Image>
                 <VGroup hAlign='flex-start' vAlign='space-between'>
                     <Text>{nickname}</Text>
-                    <AtTag size='small' circle>{tag}</AtTag>
+                    <Text style={style.updateTime}>发布于 2019-01-31 13:36:23</Text>
                 </VGroup>
             </HGroup>
            
@@ -111,8 +117,8 @@ export default class ItemCard extends Component {
                     <Text style={style.iconText}>{viewCount}</Text>
                 </View>
                 <View>
-                    <Image style={style.icon} src={iconCollect}></Image>
-                    <Text style={style.iconText}>{collectCount}</Text>
+                    <Image style={style.icon} src={iconComment}></Image>
+                    <Text style={style.iconText}>{commentCount}</Text>
                 </View>
                 <View>
                     <Image style={style.icon} src={iconShare}></Image>

@@ -6,7 +6,7 @@ import { AtDivider } from 'taro-ui'
 import './index.less'
 import SearchBar from './views/search-bar'
 import SliderBox from './views/slider-box'
-import QouteText from './views/qoute-text'
+import { QouteText, BottomTab }  from '../../components'
 import ItemCard from './views/item-card'
 
 
@@ -44,7 +44,7 @@ class Index extends Component {
       
         <ItemCard></ItemCard>
         <ItemCard></ItemCard>
-        <AtDivider content='没有更多了' fontColor='#2d8cf0' lineColor='#2d8cf0' />
+        <BottomTab activeIndex={0}></BottomTab>
       </View>
     )
   }

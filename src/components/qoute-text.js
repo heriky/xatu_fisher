@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { HGroup } from '../../../components'
+import { HGroup } from './layout'
 
 const style = {
     paddingLeft: '10px',

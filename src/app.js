@@ -23,7 +23,11 @@ class App extends Component {
   config = {
     "pages": [
       "pages/home/index",
+
       "pages/publish/index",
+      "pages/publish/goods-edit",
+      "pages/publish/goods-list",
+
       "pages/my/index"
     ],
     "window": {
@@ -37,28 +41,6 @@ class App extends Component {
       "downloadFile": 10000
     },
     "debug": true,
-     "tabBar": {
-        "position": 0,
-        "selectedColor": "#ff5243",
-        "backgroundColor": "transparent",
-        "borderStyle": "black",
-        "list": [{
-          "pagePath": "pages/home/index",
-          "text": "推荐",
-          "iconPath": "assets/images/popular.png",
-          "selectedIconPath": "assets/images/popular_selected.png"
-        }, {
-          "pagePath": "pages/publish/index",
-          "text": "发布",
-          "iconPath": "assets/images/top.png",
-          "selectedIconPath": "assets/images/top_selected.png"
-        }, {
-          "pagePath": "pages/my/index",
-          "text": "我的",
-          "iconPath": "assets/images/my.png",
-          "selectedIconPath": "assets/images/my_selected.png"
-        }]
-      }
   };
 
   componentDidMount () {}
