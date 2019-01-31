@@ -14,7 +14,7 @@ export default class Publish extends Component {
     goActivity = () => {}
 
     render() {
-        return <View>
+        return <View style={{paddingBottom: '65px'}}>
             <AtList>
                 <AtListItem
                   title='管理二手商品'

@@ -30,7 +30,7 @@ class Index extends Component {
   
   render () {
     return (
-      <View>
+      <View style={{paddingBottom: '65px'}}>
         <SearchBar onClick={this.clickSearchBar}></SearchBar>
 
         <SliderBox></SliderBox>

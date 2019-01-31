@@ -4,6 +4,8 @@ import Line from './line'
 import BottomTab from './bottom-tab'
 import BottomBtn from './bottom-btn'
 
+import XaInput from './base/xa-input'
+
 export {
     HGroup,
     VGroup,
@@ -11,5 +13,6 @@ export {
     QouteText,
     Line,
     BottomTab,
-    BottomBtn
+    BottomBtn,
+    XaInput
 }

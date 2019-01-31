@@ -3,7 +3,7 @@ import { View, Button, Text } from '@tarojs/components'
 
 import { HGroup, VGroup, QouteText, Line, BottomTab } from '../../components'
 
-import GoddsEditor from './compos/goods-editor'
+import GoodsEditor from './compos/goods-editor'
 
 const style = {
     root: {
@@ -25,7 +25,7 @@ export default class My extends Component {
 
             <Line _style={{marginTop: '10px'}}></Line>
 
-            <GoddsEditor></GoddsEditor>
+            <GoodsEditor></GoodsEditor>
 
         </VGroup>
     }
